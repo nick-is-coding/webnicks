@@ -15,15 +15,30 @@ function Buttons() {
 ]
 
   return (
-    <Grid item textAlign= 'center'>
-        <Grid item xs={12} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-      {ButtonList.map((button, index) => (
-        <Button variant='contained' key={index} href={button.link} style={{margin: '30px', backgroundColor: '#3D405B', width: '20vw'}}>
-          {button.logo}
-          {button.name}
-        </Button>
-      ))}
-    </Grid>
+    <Grid container justifyContent="center" sx={{maxWidth: '600px', mx: 'auto', marginTop: 5}}>
+      <Grid item xs={12} sx={{ display: 'flex', flexDirection: 'row', justifyContent: 'center', flexWrap: 'wrap' }}>
+        {ButtonList.map((button, index) => (
+          <Button
+            key={index}
+            variant='contained'
+            href={button.link}
+            sx={{
+              m: '10px',
+              backgroundColor: '#F16775',
+              color: 'white',
+              width: '40%',
+              transition: 'all 0.3s ease',
+              '&:hover': {
+                backgroundColor: '#D53F3F',
+              },
+            }}
+          >
+            {button.logo}
+            <span style={{marginLeft: '10px'}}></span>
+            {button.name}
+          </Button>
+        ))}
+      </Grid>
     </Grid>
   );
 }

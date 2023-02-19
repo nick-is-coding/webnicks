@@ -14,7 +14,7 @@ const marquee = keyframes`
 
 function Header() {
     return(
-        <AppBar position="static" sx={{ backgroundColor: '#F2CC8F' }}>
+        <AppBar position="static" sx={{ backgroundColor: '#FEE36E' }}>
                 <Toolbar>
                 <Typography variant="h6">
                     <Box
@@ -22,14 +22,19 @@ function Header() {
                     sx={{
                         position: "absolute",
                         right: 0,
+                        top: 15,
                         overflow: "hidden",
                         whiteSpace: "nowrap",
                         animation: `${marquee} 15s linear infinite`,
                         width: "100vw",
-                        color: '#F4F1DE',
+                        color: '#2A2A2A',
                       }}
                     >
-                    Imagine your favorite song is playing <HeadsetIcon sx={{position: "relative", top: 3}}/> ... 
+                    <HeadsetIcon sx={{position: "relative", top: 5}}/> 
+                    <span style={{marginLeft: '10px'}}></span>
+                      Imagine your favorite song is playing 
+                    <span style={{marginRight: '10px'}}></span>
+                    <HeadsetIcon sx={{position: "relative", top: 5}}/>
                     </Box>
                     </Typography>
                 </Toolbar>
